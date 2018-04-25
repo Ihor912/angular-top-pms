@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-sm-6 col-xs-6 col-md-offset-3">
+      <div id="iosBlurBg">
+        <div id="whiteBg"></div>
+      </div>
+      <div id="bottomEnter"></div>
+      <div id="bottomBlurBg"></div>
+      
+      <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+        <div class="loginForm">
+          <div class="title">
+            <p>TOP PM<br><span>SYSTEM</span></p>
+            <hr>
+            <hr class="short">
+          </div>
+          <input id="login" name="login" class="effect-2" type="text" placeholder="Login..." ngModel>
+          <span class="focus-border"></span>
+          <input id="pass" name="pass" class="effect-2" type="password" placeholder="Password..." ngModel>
+          <span class="focus-border"></span>
+          <div class="forget">
+            <button class="btn btn-default btn-sm">FORGOT PASSWORD?</button>
+          </div>
+        </div>
+        <button class="enterButton" type="submit">
+          <i class="fa fa-lock fa-2x text-white"></i><br>
+          <span class="enterText text-white">Enter</span>
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
