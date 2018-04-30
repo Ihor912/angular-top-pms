@@ -7,6 +7,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { LoginComponent } from './login/login.component';
 import { routing } from './app.routing';
 import { ProjectsComponent } from './projects/projects.component';
+import { UserService } from './login/user.service';
 
 
 @NgModule({
@@ -21,7 +22,9 @@ import { ProjectsComponent } from './projects/projects.component';
     FormsModule,
     routing
   ],
-  providers: [],
+  providers: [
+    UserService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
