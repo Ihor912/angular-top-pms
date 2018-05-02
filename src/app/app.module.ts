@@ -9,6 +9,7 @@ import { routing } from './app.routing';
 import { ProjectsComponent } from './projects/projects.component';
 import { UserService } from './login/user.service';
 import { TasksComponent } from './tasks/tasks.component';
+import { ProjectsService } from './projects/projects.service';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { TasksComponent } from './tasks/tasks.component';
     routing
   ],
   providers: [
-    UserService
+    UserService,
+    ProjectsService
   ],
   bootstrap: [AppComponent]
 })
