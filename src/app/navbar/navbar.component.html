@@ -1,11 +1,11 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
   <a class="navbar-brand" [routerLink]="['/projects']">TopPMS</a>
   <ul class="navbar-nav mr-auto">
-    <li class="nav-item active">
-      <a class="nav-link" [routerLink]="['/projects']">Projects</a>
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['/projects']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Projects</a>
     </li>
-    <li class="nav-item active">
-      <a class="nav-link" [routerLink]="['/tasks']">Tasks</a>
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['/tasks']" routerLinkActive="active">Tasks</a>
     </li>
   </ul>
   <span class="login-name">{{userService.currentUserName}}</span>
