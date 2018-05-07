@@ -10,6 +10,7 @@ import { ProjectsComponent } from './projects/projects.component';
 import { UserService } from './login/user.service';
 import { TasksComponent } from './tasks/tasks.component';
 import { ProjectsService } from './projects/projects.service';
+import { ProjectDetailsComponent } from './projects/project-details/project-details.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { ProjectsService } from './projects/projects.service';
     NavbarComponent,
     LoginComponent,
     ProjectsComponent,
-    TasksComponent
+    TasksComponent,
+    ProjectDetailsComponent
   ],
   imports: [
     BrowserModule,
