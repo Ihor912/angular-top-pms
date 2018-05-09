@@ -1,0 +1,18 @@
+<app-navbar></app-navbar>
+<form (ngSubmit)="updateProject(f)" #f="ngForm">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <input id="idProj" name="id" [(ngModel)]="project.id"  class="effect-2" type="text" placeholder="id..." ngModel>
+        <span class="focus-border"></span>
+        <input id="name" name="name" [(ngModel)]="project.name"  class="effect-2" type="text" placeholder="Name..." ngModel>
+        <span class="focus-border"></span>
+        <input id="type" name="type" [(ngModel)]="project.type" class="effect-2" type="text" placeholder="Type..." ngModel>
+        <span class="focus-border"></span>
+        <input id="owner" name="owner" [(ngModel)]="project.owner" class="effect-2" type="text" placeholder="Owner..." ngModel>
+        <span class="focus-border"></span>
+        <button class="enterButton"  type="submit" >Update</button>
+      </div>
+    </div>
+  </div>
+</form>

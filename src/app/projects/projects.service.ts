@@ -29,4 +29,24 @@ export class ProjectsService {
     public getProject(id: string): Project {
         return this.projects.find(p => p.id === id);
     }
+
+    deleteProject(index: number) {
+        this.projects.splice(index, 1);
+    }
+
+    createProject(project: Project) {
+        this.projects.push(project);
+    }
+
+    getProjectUpdateURL(project: Project) {
+        return ['/projects/update/' + project.id];
+    }
+
+    getProjectById(id: string): Project {
+        return this.projects.find(project => project.id === id);
+    }
+
+    updateProject(index: number, project: Project) {
+        this.projects[index] = project;
+    }
 }

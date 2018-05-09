@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ProjectsService } from './projects.service';
 import { Project } from '../common/protocols';
 
@@ -9,12 +9,25 @@ import { Project } from '../common/protocols';
   styleUrls: ['./projects.component.css']
 })
 export class ProjectsComponent implements OnInit {
-  constructor(private projectsService: ProjectsService) {}
+  constructor(private projectsService: ProjectsService, public router: Router) {}
 
   ngOnInit() {
   }
 
   getProjectDetailsURL(project: Project) {
     return ['/projects/' + project.id];
+  }
+
+  createProject() {
+    this.router.navigate(['./create']);
+  }
+
+  getProjectUpdateURL(project: Project) {
+    return ['/projects/update/' + project.id];
+  }
+
+  deleteProject(id: string) {
+    const project: Project = this.projectsService.projects.find(p => p.id === id);
+    this.projectsService.deleteProject(this.projectsService.projects.indexOf(project));
   }
 }
