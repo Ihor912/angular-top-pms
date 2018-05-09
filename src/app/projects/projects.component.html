@@ -5,12 +5,10 @@
   <button class="success" (click)="createProject()">Create</button>
   <div class="container">
     <div class="row" *ngFor="let project of projectsService.projects">
-      <div class="col">{{project.name}}</div>
-      <div class="col">{{project.owner}}</div>
-      <div class="col">{{project.type}}</div>
-      <span [routerLink]="getProjectDetailsURL(project)">Details</span>
-      <button class="btn-warning" [routerLink]="getProjectUpdateURL(project)">Update</button>
-      <button class="delete" (click)="deleteProject(project.id)">Delete</button>
+      <app-list-item [item]="project"
+                     [detailsRouterLink]="getProjectDetailsURL(project)"
+                     [updateRouterLink]="getProjectUpdateURL(project)"
+                     (delete)="deleteProject($event)"></app-list-item>
     </div>
   </div>
 </div>

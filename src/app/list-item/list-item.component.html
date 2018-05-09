@@ -1,0 +1,8 @@
+<div class="row">
+  <div class="col">{{item.name}}</div>
+  <div class="col">{{item.owner}}</div>
+  <div class="col">{{item.type}}</div>
+  <span [routerLink]="detailsRouterLink">Details</span>
+  <button class="btn-warning" [routerLink]="updateRouterLink">Update</button>
+  <button class="delete" (click)="deleteItem()">Delete</button>
+</div>
