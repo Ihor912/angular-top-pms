@@ -13,7 +13,7 @@ import {ProjectsService} from '../projects.service';
   styleUrls: ['./project-update.component.css']
 })
 export class ProjectUpdateComponent implements OnInit {
-  project: Project; // current project
+  project: Project;
   paramSubscription: Subscription;
   constructor(public projectsService: ProjectsService, public activatedRouter: ActivatedRoute, public router: Router) { }
 
