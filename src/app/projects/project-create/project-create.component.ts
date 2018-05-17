@@ -16,6 +16,7 @@ export class ProjectCreateComponent implements OnInit {
     name: '',
     type: '',
     owner: '',
+    taskId: '',
     members: Array<Member>()
   };
   constructor(public projectService: ProjectsService, public router: Router) {
